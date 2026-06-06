@@ -24,4 +24,10 @@
       ],
     },
   },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "0938c90bd06f49ea8a8f522323c5361a",
+    },
+  ],
 }
