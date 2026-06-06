@@ -1,0 +1,165 @@
+---
+import logo from "../assets/scholrbee_logo.png";
+import { MoveRight, Menu, X } from "@lucide/astro";
+
+const { pathname } = Astro.url;
+const isHome = pathname === "/" || pathname === "";
+
+const navLinks = [
+  { label: "Home", href: "/", external: false },
+  {
+    label: "Capabilities",
+    href: isHome ? "#features" : "/#features",
+    external: false,
+  },
+  {
+    label: "Pricing",
+    href: isHome ? "#pricing" : "/#pricing",
+    external: false,
+  },
+  { label: "About", href: "/about", external: true },
+  { label: "Contact", href: "/contact", external: true },
+];
+
+const isActive = (href: string) => {
+  if (href === "/") {
+    return pathname === "/" || pathname === "";
+  }
+  return pathname.startsWith(href);
+};
+---
+
+<script>
+  function setupMobileMenu() {
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = document.querySelectorAll("#mobile-menu a");
+
+    function openMenu() {
+      mobileMenu?.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+      mobileMenu?.classList.add("hidden");
+      document.body.style.overflow = "auto";
+    }
+
+    menuBtn?.addEventListener("click", openMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+
+    // Close menu when clicking on a link
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  }
+
+  setupMobileMenu();
+  document.addEventListener("astro:after-swap", setupMobileMenu);
+</script>
+
+<nav
+  class="sticky top-4 z-50 bg-surface/80 backdrop-blur-lg flex items-center justify-between py-2 flex-wrap gap-4 border border-outline-variant/10 px-2 rounded-full w-full md:w-1/2 mx-auto"
+>
+  <a
+    href="/"
+    class="flex items-center gap-2 shrink-0 hover:opacity-90 transition-opacity"
+  >
+    <img src={logo.src} alt="ScholrBee Logo" class="w-10 sm:w-11" />
+    <span class="font-display text-headline-md sm:text-headline-lg text-primary"
+      >ScholrBee</span
+    >
+  </a>
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex items-center gap-4 sm:gap-6 flex-wrap justify-end">
+    <ul
+      class="flex gap-4 sm:gap-6 text-on-surface-variant items-center text-sm sm:text-base flex-wrap justify-end font-medium"
+    >
+      {
+        navLinks.map((link) => {
+          const active = isActive(link.href);
+          return (
+            <li>
+              <a
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                class={`transition duration-300 ${
+                  active
+                    ? "text-primary font-bold border-b-2 border-primary pb-0.5"
+                    : "text-on-surface-variant hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <a
+      href="/app"
+      class="px-4 py-2 bg-primary text-on-primary hover:bg-primary-container transition duration-300 rounded-full flex items-center gap-2 text-xs sm:text-sm font-semibold whitespace-nowrap shadow-subtle active:scale-[0.98]"
+    >
+      Try Now <MoveRight class="w-4 h-4" />
+    </a>
+  </div>
+
+  <!-- Mobile Menu Button -->
+  <button
+    id="menu-btn"
+    class="md:hidden flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition duration-300"
+  >
+    <Menu class="w-6 h-6" />
+  </button>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div
+  id="mobile-menu"
+  class="hidden fixed inset-0 z-100 bg-surface/80 backdrop-blur-lg md:hidden"
+>
+  <div class="flex flex-col items-center justify-center min-h-screen gap-8">
+    <!-- Close Button -->
+    <button
+      id="close-btn"
+      class="absolute top-6 right-6 flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition duration-300"
+    >
+      <X class="w-6 h-6" />
+    </button>
+
+    <!-- Mobile Menu Links -->
+    <ul class="flex flex-col gap-8 text-center">
+      {
+        navLinks.map((link) => {
+          const active = isActive(link.href);
+          return (
+            <li>
+              <a
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                class={`text-lg font-semibold transition duration-300 ${
+                  active
+                    ? "text-primary"
+                    : "text-on-surface-variant hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <!-- Mobile CTA Button -->
+    <a
+      href="/app"
+      class="px-6 py-3 bg-primary text-on-primary hover:bg-primary-container transition duration-300 rounded-full flex items-center gap-2 text-sm font-semibold shadow-subtle active:scale-[0.98]"
+    >
+      Try Now <MoveRight class="w-4 h-4" />
+    </a>
+  </div>
+</div>

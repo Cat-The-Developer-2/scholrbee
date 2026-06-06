@@ -1,0 +1,418 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { Shield, AlertCircle, Scale, FileText, Calendar } from "@lucide/astro";
+---
+
+<Layout
+  title="Terms & Conditions - ScholrBee Study App"
+  description="ScholrBee terms and conditions for our studying app. Learn about user rights, responsibilities, and terms of use for the best AI-powered study app for students."
+  keywords="ScholrBee terms, study app terms of service, student app agreement, studying app terms, app terms and conditions"
+>
+  <!-- Navbar -->
+  <Header />
+
+  <div class="px-4 sm:px-6 md:px-20 lg:px-50 flex flex-col min-h-screen">
+    <!-- Content Section -->
+    <div class="py-12 sm:py-16">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Sidebar Navigation (Sticky on desktop) -->
+        <aside
+          class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 h-fit space-y-6"
+        >
+          <div
+            class="bg-surface-container rounded-2xl p-5 border border-outline-variant/30"
+          >
+            <h3
+              class="font-display text-lg font-bold text-primary mb-4 flex items-center gap-2"
+            >
+              <Scale class="w-5 h-5 text-secondary" /> Navigation
+            </h3>
+            <ul class="space-y-3 text-sm font-medium text-on-surface-variant">
+              <li>
+                <a
+                  href="#introduction"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  Introduction
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#usage"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  1. Terms of Use
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#license"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  2. License & Restrictions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#intellectual"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  3. Intellectual Property
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#content"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  4. User Content
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#liability"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  5. Limitation of Liability
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#termination"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  6. Termination
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#changes"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  7. Changes to Terms
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-secondary/10 rounded-2xl p-5 shadow-sm border border-secondary/20"
+          >
+            <h4
+              class="font-display text-md font-bold text-primary flex items-center gap-2"
+            >
+              <AlertCircle class="w-4 h-4" /> Important
+            </h4>
+            <p class="text-xs text-on-surface-variant mt-2 leading-relaxed">
+              By accessing and using ScholrBee, you agree to be bound by these
+              Terms & Conditions in their entirety.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Main Document Body -->
+        <article class="flex-1 max-w-3xl space-y-10">
+          <header class="border-b border-outline-variant/30 pb-6">
+            <div
+              class="flex items-center gap-2 text-secondary text-sm font-semibold uppercase tracking-wider mb-2"
+            >
+              <Calendar class="w-4 h-4" /> Last Updated: June 6, 2026
+            </div>
+            <h1 class="text-headline-xl text-primary leading-tight">
+              Terms & Conditions
+            </h1>
+            <p
+              class="text-body-md text-on-surface-variant mt-4 leading-relaxed text-justify"
+            >
+              These Terms & Conditions ("Terms") govern your access to and use
+              of the ScholrBee platform, including our website, desktop
+              applications, mobile applications, and related services
+              (collectively, the "Service"). Please read these Terms carefully
+              before using the Service.
+            </p>
+          </header>
+
+          <!-- Introduction -->
+          <section id="introduction" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              Introduction
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              ScholrBee ("Company", "we", "us", "our") provides an AI-native
+              academic workspace designed to help students and researchers
+              organize, synthesize, and deepen their understanding of scholarly
+              materials. By accessing or using our Service, you agree to comply
+              with and be bound by these Terms. If you do not agree to these
+              Terms, you may not use the Service.
+            </p>
+          </section>
+
+          <!-- 1. Terms of Use -->
+          <section id="usage" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              1. Terms of Use
+            </h2>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">1.1 Eligibility</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                You must be at least 13 years of age to use the Service. If you
+                are under 18, you represent that you have obtained parental
+                consent. By using ScholrBee, you represent and warrant that you
+                have the right, authority, and capacity to enter into this
+                agreement.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">
+                1.2 Account Responsibility
+              </h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                You are responsible for maintaining the confidentiality of your
+                account information and password. You agree to accept
+                responsibility for all activities that occur under your account.
+                You will notify us immediately of any unauthorized use of your
+                account or any other breaches of security.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">1.3 Prohibited Conduct</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                You agree not to:
+              </p>
+              <ul
+                class="list-disc pl-6 space-y-2 text-body-md text-on-surface-variant"
+              >
+                <li>
+                  Use the Service for any illegal purpose or in violation of any
+                  applicable laws
+                </li>
+                <li>
+                  Attempt to gain unauthorized access to the Service or its
+                  related systems
+                </li>
+                <li>
+                  Transmit malware, viruses, or any code of a destructive nature
+                </li>
+                <li>Engage in harassment, abuse, or hate speech</li>
+                <li>
+                  Use the Service to infringe upon intellectual property rights
+                </li>
+                <li>
+                  Reverse engineer, decompile, or attempt to discover the source
+                  code
+                </li>
+                <li>Interfere with the normal operation of the Service</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 2. License & Restrictions -->
+          <section id="license" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              2. License & Restrictions
+            </h2>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">2.1 Limited License</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                Subject to these Terms, ScholrBee grants you a limited,
+                non-exclusive, non-transferable, revocable license to access and
+                use the Service for your personal, non-commercial scholarly and
+                educational purposes.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">2.2 Restrictions</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                You may not copy, modify, distribute, transmit, display,
+                perform, reproduce, publish, license, create derivative works
+                from, transfer, or sell any information or services obtained
+                from the Service without our prior written consent, except as
+                permitted by law.
+              </p>
+            </div>
+          </section>
+
+          <!-- 3. Intellectual Property -->
+          <section id="intellectual" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              3. Intellectual Property
+            </h2>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">3.1 ScholrBee Content</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                The Service, including all content, features, functionality, and
+                design (collectively, "ScholrBee Content"), is owned by
+                ScholrBee, its licensors, or other providers of such content.
+                ScholrBee Content is protected by copyright, trademark, and
+                other intellectual property laws.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">
+                3.2 Third-Party Content
+              </h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                The Service may include third-party content, including research
+                papers, articles, and educational materials. We provide access
+                to these materials for educational purposes only. Your use of
+                such content is governed by the original creator's terms and
+                applicable laws.
+              </p>
+            </div>
+          </section>
+
+          <!-- 4. User Content -->
+          <section id="content" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              4. User Content
+            </h2>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">4.1 Your Rights</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                You retain all rights to any content you upload, create, or
+                store on ScholrBee ("User Content"). By uploading User Content
+                to the Service, you grant ScholrBee a non-exclusive, worldwide,
+                royalty-free license to store, process, and use your User
+                Content to provide and improve the Service.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">
+                4.2 User Content Responsibility
+              </h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                You are solely responsible for the content you upload or
+                transmit. You represent and warrant that you own or have
+                obtained all necessary permissions for any User Content you
+                submit. You agree not to upload content that violates any laws,
+                these Terms, or third-party rights.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">4.3 Removal of Content</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                ScholrBee may remove or disable access to User Content that we
+                determine, in our sole discretion, violates these Terms or
+                applicable laws.
+              </p>
+            </div>
+          </section>
+
+          <!-- 5. Limitation of Liability -->
+          <section id="liability" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              5. Limitation of Liability
+            </h2>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">5.1 Disclaimer</h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT
+                WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+                LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+                PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold text-primary">
+                5.2 Limitation of Damages
+              </h3>
+              <p
+                class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+              >
+                IN NO EVENT SHALL SCHOLRBEE, ITS DIRECTORS, EMPLOYEES, OR AGENTS
+                BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+                OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF YOUR
+                USE OF THE SERVICE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+                DAMAGES.
+              </p>
+            </div>
+          </section>
+
+          <!-- 6. Termination -->
+          <section id="termination" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              6. Termination
+            </h2>
+
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              ScholrBee may terminate or suspend your account and access to the
+              Service at any time, with or without cause, and with or without
+              notice. Upon termination, your right to use the Service will
+              immediately cease. You remain liable for any outstanding
+              obligations.
+            </p>
+          </section>
+
+          <!-- 7. Changes to Terms -->
+          <section id="changes" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              7. Changes to Terms
+            </h2>
+
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              ScholrBee reserves the right to modify these Terms at any time.
+              Changes will be effective upon posting to the Service. Your
+              continued use of the Service after changes constitutes your
+              acceptance of the new Terms. We encourage you to review these
+              Terms regularly to stay informed of any updates.
+            </p>
+          </section>
+
+          <!-- Contact Section -->
+          <section class="mt-16 pt-8 border-t border-outline-variant/30">
+            <h2 class="font-display text-headline-md text-primary mb-4">
+              Questions?
+            </h2>
+            <p class="text-body-md text-on-surface-variant leading-relaxed">
+              If you have any questions about these Terms & Conditions, please <a
+                href="/contact"
+                class="text-primary font-semibold hover:underline">contact us</a
+              >.
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </div>
+</Layout>

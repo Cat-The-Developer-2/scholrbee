@@ -1,0 +1,362 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { Shield, Lock, Eye, Key, FileText, Calendar } from "@lucide/astro";
+---
+
+<Layout
+  title="Privacy Policy - ScholrBee Study App"
+  description="ScholrBee privacy policy. Learn how we protect your study notes, research data, and personal information. Transparent data practices for the best studying app."
+  keywords="ScholrBee privacy, study app security, student data protection, study notes privacy, studying app data"
+>
+  <!-- Navbar -->
+  <Header />
+
+  <div class="px-4 sm:px-6 md:px-20 lg:px-50 flex flex-col min-h-screen">
+    <!-- Content Section -->
+    <div class="py-12 sm:py-16">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Sidebar Navigation (Sticky on desktop) -->
+        <aside
+          class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 h-fit space-y-6"
+        >
+          <div
+            class="bg-surface-container rounded-2xl p-5 border border-outline-variant/30"
+          >
+            <h3
+              class="font-display text-lg font-bold text-primary mb-4 flex items-center gap-2"
+            >
+              <Shield class="w-5 h-5 text-secondary" /> Navigation
+            </h3>
+            <ul class="space-y-3 text-sm font-medium text-on-surface-variant">
+              <li>
+                <a
+                  href="#introduction"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  Introduction
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#collect"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  1. Information We Collect
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#use"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  2. How We Use Information
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#sharing"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  3. Sharing & Disclosures
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#security"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  4. Data Security & Storage
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#rights"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  5. Your Privacy Rights
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#cookies"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  6. Cookies & Tracking
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#updates"
+                  class="hover:text-primary transition duration-200 block py-1 border-l-2 border-transparent pl-3 hover:border-primary"
+                >
+                  7. Policy Updates
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-primary text-[#ffdea9] rounded-2xl p-5 shadow-sm border border-primary/20"
+          >
+            <h4
+              class="font-display text-md font-bold text-white flex items-center gap-2"
+            >
+              <Lock class="w-4 h-4" /> Data Promise
+            </h4>
+            <p class="text-xs text-white/80 mt-2 leading-relaxed">
+              We never sell your personal text inputs, research notes, or files
+              to third-party advertisers or AI-training brokers. Your
+              intellectual property belongs strictly to you.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Main Document Body -->
+        <article class="flex-1 max-w-3xl space-y-10">
+          <header class="border-b border-outline-variant/30 pb-6">
+            <div
+              class="flex items-center gap-2 text-secondary text-sm font-semibold uppercase tracking-wider mb-2"
+            >
+              <Calendar class="w-4 h-4" /> Last Updated: June 6, 2026
+            </div>
+            <h1 class="text-headline-xl text-primary leading-tight">
+              Privacy Policy
+            </h1>
+            <p
+              class="text-body-md text-on-surface-variant mt-4 leading-relaxed text-justify"
+            >
+              At ScholrBee, we are deeply committed to protecting your
+              intellectual work, research papers, notes, and personal
+              information. This Privacy Policy details the types of data we
+              collect, how we store and handle it, and the absolute ownership
+              rights you retain over your information.
+            </p>
+          </header>
+
+          <!-- Introduction -->
+          <section id="introduction" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              Introduction
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              ScholrBee ("we", "us", "our") operates the academic companion
+              platform and desktop/mobile applications. In supplying an
+              AI-native workspace, we understand that you place high trust in us
+              to secure your files and thoughts. We prioritize maximum privacy
+              and data security above all, keeping our architecture robust and
+              clean.
+            </p>
+          </section>
+
+          <!-- 1. Information We Collect -->
+          <section id="collect" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              1. Information We Collect
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              We collect information to facilitate registration, authentication,
+              and platform functionalities:
+            </p>
+            <ul
+              class="list-disc pl-5 space-y-2 text-body-sm text-on-surface-variant"
+            >
+              <li>
+                <strong class="text-primary">Account Information:</strong> Name, academic
+                email address, and login credentials when you establish an account.
+              </li>
+              <li>
+                <strong class="text-primary">User-Generated Content:</strong> Your
+                uploaded notes, lecture transcriptions, PDFs, and conversation history
+                with the AI Mentor.
+              </li>
+              <li>
+                <strong class="text-primary">Usage Statistics:</strong> General performance,
+                analytics regarding features used (e.g., flashcard counts, graph nodes
+                generated), and device indicators (such as browser version, operating
+                system) to improve platform stability.
+              </li>
+              <li>
+                <strong class="text-primary">Billing Data:</strong> For upgraded tiers,
+                transaction details are processed securely through our PCI-DSS compliant
+                partner (Stripe). We do not store full card numbers on our servers.
+              </li>
+            </ul>
+          </section>
+
+          <!-- 2. How We Use Information -->
+          <section id="use" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              2. How We Use Information
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              We utilize collected information strictly to fuel your academic
+              companion and maintain core application services:
+            </p>
+            <ul
+              class="list-disc pl-5 space-y-2 text-body-sm text-on-surface-variant"
+            >
+              <li>
+                To compile, format, and visualize your personal study network
+                and active recall cards.
+              </li>
+              <li>
+                To supply responses from our AI Mentor using scoped,
+                context-aware processing.
+              </li>
+              <li>
+                To verify subscription status, process transactions, and manage
+                authentication.
+              </li>
+              <li>
+                To troubleshoot bugs, optimize database queries, and improve
+                overall server efficiency.
+              </li>
+            </ul>
+          </section>
+
+          <!-- 3. Sharing & Disclosures -->
+          <section id="sharing" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              3. Sharing & Disclosures
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              We believe your work is your own. We do not sell, barter, or
+              transfer your content to third parties. We only share data with
+              proven subprocessors necessary to deliver services (such as secure
+              database hosts or foundational LLM providers running on
+              zero-retention privacy policies).
+            </p>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              We may disclose information to law enforcement strictly if
+              mandated under a binding, legal warrant issued by a court of
+              competent jurisdiction.
+            </p>
+          </section>
+
+          <!-- 4. Data Security & Storage -->
+          <section id="security" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              4. Data Security & Storage
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              Your research is safeguarded behind layers of military-grade
+              protection:
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 pt-2">
+              <div
+                class="bg-surface-container/60 border border-outline-variant/30 rounded-xl p-4"
+              >
+                <span class="font-semibold text-primary block text-sm mb-1"
+                  >In-Transit Encryption</span
+                >
+                <p class="text-xs text-on-surface-variant leading-relaxed">
+                  All active requests and data synchronization between your
+                  device and our servers use TLS 1.3 encryption protocols.
+                </p>
+              </div>
+              <div
+                class="bg-surface-container/60 border border-outline-variant/30 rounded-xl p-4"
+              >
+                <span class="font-semibold text-primary block text-sm mb-1"
+                  >Rest Encryption</span
+                >
+                <p class="text-xs text-on-surface-variant leading-relaxed">
+                  Database volumes and file buckets are fully encrypted under
+                  AES-256 standards with automated key rotations.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Your Privacy Rights -->
+          <section id="rights" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              5. Your Privacy Rights
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              Regardless of your region (GDPR, CCPA, or FERPA guidelines), we
+              offer standard data rights globally:
+            </p>
+            <ul
+              class="list-disc pl-5 space-y-2 text-body-sm text-on-surface-variant"
+            >
+              <li>
+                <strong class="text-primary">Right to Portability:</strong> Export
+                your full archive of research, mind maps, and text notes in markdown
+                format at any time.
+              </li>
+              <li>
+                <strong class="text-primary">Right to Rectification:</strong> Edit,
+                modify, or update your personal account profile.
+              </li>
+              <li>
+                <strong class="text-primary"
+                  >Right to Erasure ("Right to be Forgotten"):</strong
+                > Terminate your account and request complete permanent deletion of
+                your notes and files from active nodes.
+              </li>
+            </ul>
+          </section>
+
+          <!-- 6. Cookies & Tracking -->
+          <section id="cookies" class="scroll-mt-6 space-y-4">
+            <h2 class="font-display text-headline-md text-primary">
+              6. Cookies & Tracking
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              We employ cookies solely for functional authentication purposes
+              (staying logged in between sessions) and to preserve your
+              dashboard theme state. We do not implement cross-site tracking
+              pixels or target advertisements using your cookies.
+            </p>
+          </section>
+
+          <!-- 7. Policy Updates -->
+          <section
+            id="updates"
+            class="scroll-mt-6 space-y-4 border-t border-outline-variant/30 pt-6"
+          >
+            <h2 class="font-display text-headline-md text-primary">
+              7. Policy Updates
+            </h2>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              We may revise this policy occasionally to support structural
+              additions or alignment with new global regulations. We will notify
+              you of substantial changes via academic emails or conspicuous
+              alerts on the main dashboard interface.
+            </p>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+            >
+              For any questions regarding privacy, please contact our data team
+              directly at <a
+                href="mailto:privacy@studyos.com"
+                class="text-secondary font-semibold hover:underline"
+                >privacy@studyos.com</a
+              >.
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </div>
+</Layout>

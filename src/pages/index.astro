@@ -1,17 +1,548 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import logo from "../assets/scholrbee_logo.png";
+import heroImage from "../assets/heroImage.png";
+import FeatureCard from "../components/FeatureCard.astro";
+import PricingCard from "../components/PricingCard.astro";
 
+import {
+  MoveRight,
+  Landmark,
+  NotebookText,
+  BookOpenText,
+  FlaskConical,
+  ScrollText,
+  Bot,
+  Network,
+  NotebookPen,
+  Command,
+  Zap,
+  Component,
+  Info,
+  Mail,
+  Shield,
+  FileText,
+} from "@lucide/astro";
+
+const contactLinks = [
+  { label: "Email", value: "hello@studyos.com" },
+  { label: "Response time", value: "Usually within 24 hours" },
+  { label: "Office hours", value: "Mon–Sat, 10:00 AM – 7:00 PM" },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="ScholrBee - Best AI Study App for Students | Free Studying App with Flashcards"
+  description="ScholrBee is the best studying app for students. AI-powered student study app with gamified studying, flashcards, mind maps, spaced repetition, active recall, and study planner features to improve study habits and ace exams."
+  keywords="studying app, study app, student study app, best studying app, gamify studying app, AI studying app, free studying app, study planner app, study assistant app, study notes app, flashcard app for students, mind map app for studying, Scholar Bee, best app for studying, app to improve study habits, app for active recall, app for spaced repetition"
+>
+  <!-- hero section -->
+  <!-- navbar -->
+  <Header />
+  <section id="hero" class="px-4 sm:px-6 md:px-20 lg:px-50 flex flex-col">
+    <!-- hero content -->
+    <div
+      class="flex flex-col lg:flex-row h-full items-center gap-8 md:gap-12 lg:gap-16 mt-8 sm:mt-12 md:mt-16"
+    >
+      <div class="flex-1 flex flex-col justify-center items-start w-full">
+        <h1 class="text-headline-xl text-on-surface">
+          ScholrBee: The Best AI Study App for Students
+        </h1>
+        <p
+          class="text-body-sm sm:text-body-md md:text-body-lg text-on-surface-variant leading-loose text-justify mt-4"
+        >
+          The AI-native studying app built for modern students. Gamify your
+          studying, improve study habits, and stay focused with intelligent
+          flashcards, mind maps, and active recall techniques. Your best study
+          app for acing exams.
+        </p>
+        <button
+          class="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-primary text-on-primary rounded-full flex items-center gap-2 cursor-pointer hover:bg-primary-hover transition text-sm sm:text-base"
+        >
+          Start Your Semester
+        </button>
+      </div>
+      <div class="flex-1 w-full h-64 sm:h-80 md:h-96 lg:h-full">
+        <img
+          src={heroImage.src}
+          alt="Hero Image"
+          class="w-full h-full object-contain"
+        />
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full mt-20 p-5 flex flex-col items-center justify-center gap-4">
+    <h2 class="text-headline-md lg:text-headline-lg text-slate-600 text-center">
+      Trusted by Students from Top Universities
+    </h2>
+    <div class="flex gap-10">
+      <Landmark class="w-7 h-7 text-slate-500" />
+      <NotebookText class="w-7 h-7 text-slate-500" />
+      <BookOpenText class="w-7 h-7 text-slate-500" />
+      <FlaskConical class="w-7 h-7 text-slate-500" />
+      <ScrollText class="w-7 h-7 text-slate-500" />
+    </div>
+  </div>
+
+  <!-- features section -->
+  <section
+    id="features"
+    class="px-4 sm:px-6 md:px-20 lg:px-50 mt-20 flex flex-col gap-12"
+  >
+    <div>
+      <h2
+        class="text-headline-md md:text-headline-lg lg:text-headline-xl text-on-surface"
+      >
+        Intelligent Capabilities
+      </h2>
+      <p
+        class="text-body-sm sm:text-body-md text-on-surface-variant leading-relaxed mt-4 text-justify"
+      >
+        Tools designed not just to store information, <br /> but to actively help
+        you understand it.
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      <FeatureCard
+        title="AI Mentor"
+        description="24/7 academic support. Ask questions, request summaries, and get context-aware explanations instantly from your notes."
+        badge="Always Active"
+        icon={Bot}
+        iconWrapClass="bg-indigo-100 text-indigo-700"
+        badgeClass="bg-indigo-200 text-indigo-900"
+        cardClass="bg-indigo-50/70"
+        titleClass="text-indigo-950"
+        descriptionClass="text-slate-700"
+      />
+
+      <FeatureCard
+        title="Mind Maps"
+        description="Fastest way to learn anything is visualizing connections. Automatically generate organic node graphs from semantic linking."
+        icon={Network}
+        iconWrapClass="bg-emerald-100 text-emerald-700"
+        cardClass="bg-emerald-50/60"
+        titleClass="text-emerald-950"
+        descriptionClass="text-slate-700"
+        badge="Scholar's Favorite"
+        badgeClass="bg-emerald-200 text-emerald-900"
+      />
+
+      <FeatureCard
+        title="Mistakes Notebook"
+        description="Master your gaps. A dedicated space to track errors, understand root causes, and turn weaknesses into strengths."
+        icon={NotebookPen}
+        iconWrapClass="bg-rose-100 text-rose-700"
+        cardClass="bg-rose-50/60"
+        titleClass="text-rose-950"
+        descriptionClass="text-slate-700"
+        badgeClass="bg-rose-200 text-rose-900"
+      />
+
+      <FeatureCard
+        title="Command Center"
+        description="Your academic dashboard. A centralized hub to manage notes, classes. Analyse your best study hours, and track progress with intuitive analytics. Make habit lists and stay organized with ease."
+        icon={Command}
+        iconWrapClass="bg-amber-100 text-amber-700"
+        cardClass="bg-amber-50/60"
+        titleClass="text-amber-950"
+        descriptionClass="text-slate-700"
+        badgeClass="bg-amber-200 text-amber-900"
+      />
+
+      <FeatureCard
+        title="Flashcards"
+        description="Active recall is the most effective way to study. Generate flashcards in seconds from any note. Designed such a way to strengthen your weak points and boost long-term retention."
+        icon={Zap}
+        iconWrapClass="bg-cyan-100 text-cyan-700"
+        cardClass="bg-cyan-50/60"
+        titleClass="text-cyan-950"
+        descriptionClass="text-slate-700"
+        badgeClass="bg-cyan-200 text-cyan-900"
+      />
+
+      <FeatureCard
+        title="Notes Wiki"
+        description="Your personal knowledge base. Create a wiki from your notes, AI mentor conversation. Get AI-generated summaries, key insights, and snippets"
+        icon={NotebookPen}
+        iconWrapClass="bg-violet-100 text-violet-700"
+        cardClass="bg-violet-50/60"
+        titleClass="text-violet-950"
+        descriptionClass="text-slate-700"
+        badgeClass="bg-violet-200 text-violet-900"
+      />
+    </div>
+
+    <FeatureCard
+      title="Grow Together Ecosystem"
+      description="Create groups share resources and gamify your studying experience with our ecosystem. Compete with friends, share notes, and celebrate milestones together."
+      icon={Component}
+      iconWrapClass="bg-teal-100 text-teal-700"
+      cardClass="bg-teal-50/60"
+      titleClass="text-teal-950"
+      descriptionClass="text-slate-700"
+      badgeClass="bg-teal-200 text-teal-900"
+    />
+  </section>
+
+  <!-- pricing section -->
+  <section
+    id="pricing"
+    class="px-4 sm:px-6 md:px-20 lg:px-50 mt-20 flex flex-col gap-12"
+  >
+    <div>
+      <h2
+        class="text-headline-md md:text-headline-lg lg:text-headline-xl text-on-surface"
+      >
+        Simple, Transparent Investing <br /> in Your Future
+      </h2>
+      <p
+        class="text-body-sm sm:text-body-md text-on-surface-variant leading-relaxed mt-4 text-justify"
+      >
+        Student-friendly plans designed to fit your academic journey,<br /> whether
+        you're just starting or managing complex research.
+      </p>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-3">
+      <PricingCard
+        title="Scholar"
+        subtitle="For students exploring AI-assisted learning."
+        priceValue="$0"
+        priceMeta="/month"
+        features={[
+          "Core Command Center",
+          "Basic AI Mentor (50 msgs/mo)",
+          "1GB Secure Storage",
+        ]}
+        ctaLabel="Get Started"
+        ctaHref="#"
+      />
+
+      <PricingCard
+        title="Researcher"
+        subtitle="For intensive studying and deep work."
+        priceValue="$12"
+        priceMeta="/month"
+        badge="Most Popular"
+        featured={true}
+        features={[
+          "Unlimited AI Mentor",
+          "Interactive Mind Maps",
+          "Mistakes Notebook",
+          "Zen Mode Exam Simulator",
+          "100GB Secure Storage",
+        ]}
+        ctaLabel="Upgrade to Researcher"
+        ctaHref="#"
+      />
+
+      <PricingCard
+        title="Institutional"
+        subtitle="For universities and student organizations."
+        priceValue="Custom"
+        features={[
+          "Everything in Researcher",
+          "Collaborative Study Groups",
+          "Priority AI Processing",
+          "SSO & Advanced Admin",
+        ]}
+        ctaLabel="Contact Sales"
+        ctaHref="#"
+      />
+    </div>
+  </section>
+
+  <!-- pages section -->
+  <section class="px-4 sm:px-6 md:px-20 lg:px-50 mt-20 flex flex-col gap-12">
+    <div>
+      <h2
+        class="text-headline-md md:text-headline-lg lg:text-headline-xl text-on-surface"
+      >
+        Learn More About ScholrBee
+      </h2>
+      <p
+        class="text-body-sm sm:text-body-md text-on-surface-variant leading-relaxed mt-4 text-justify"
+      >
+        Explore our commitment to your privacy, our story, and how we can help
+        you succeed.
+      </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- About Us Card -->
+      <a
+        href="/about"
+        class="group rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 hover:shadow-lg transition duration-300 hover:-translate-y-1"
+      >
+        <div class="flex items-start gap-4">
+          <div
+            class="h-12 w-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 group-hover:scale-110 transition duration-300"
+          >
+            <Info class="w-6 h-6" />
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-display text-headline-md text-primary group-hover:text-secondary transition duration-300"
+            >
+              About Us
+            </h3>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed mt-2"
+            >
+              Discover our mission to elevate scholarly focus through mindful
+              AI. Learn about our story, core values, and the team behind
+              ScholrBee.
+            </p>
+            <div
+              class="flex items-center gap-2 mt-4 text-primary font-semibold text-sm group-hover:gap-3 transition duration-300"
+            >
+              Learn More <MoveRight class="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Contact Us Card -->
+      <a
+        href="/contact"
+        class="group rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 hover:shadow-lg transition duration-300 hover:-translate-y-1"
+      >
+        <div class="flex items-start gap-4">
+          <div
+            class="h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 group-hover:scale-110 transition duration-300"
+          >
+            <Mail class="w-6 h-6" />
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-display text-headline-md text-primary group-hover:text-secondary transition duration-300"
+            >
+              Contact Us
+            </h3>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed mt-2"
+            >
+              Have questions or need support? Get in touch with our team. We're
+              here to help you succeed in your academic journey.
+            </p>
+            <div
+              class="flex items-center gap-2 mt-4 text-primary font-semibold text-sm group-hover:gap-3 transition duration-300"
+            >
+              Get in Touch <MoveRight class="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Privacy Policy Card -->
+      <a
+        href="/privacy"
+        class="group rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 hover:shadow-lg transition duration-300 hover:-translate-y-1"
+      >
+        <div class="flex items-start gap-4">
+          <div
+            class="h-12 w-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-700 group-hover:scale-110 transition duration-300"
+          >
+            <Shield class="w-6 h-6" />
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-display text-headline-md text-primary group-hover:text-secondary transition duration-300"
+            >
+              Privacy Policy
+            </h3>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed mt-2"
+            >
+              We are committed to protecting your data and intellectual work.
+              Read about our privacy practices and your data rights.
+            </p>
+            <div
+              class="flex items-center gap-2 mt-4 text-primary font-semibold text-sm group-hover:gap-3 transition duration-300"
+            >
+              Read Policy <MoveRight class="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Terms & Conditions Card -->
+      <a
+        href="/terms"
+        class="group rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 hover:shadow-lg transition duration-300 hover:-translate-y-1"
+      >
+        <div class="flex items-start gap-4">
+          <div
+            class="h-12 w-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-700 group-hover:scale-110 transition duration-300"
+          >
+            <FileText class="w-6 h-6" />
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-display text-headline-md text-primary group-hover:text-secondary transition duration-300"
+            >
+              Terms & Conditions
+            </h3>
+            <p
+              class="text-body-md text-on-surface-variant leading-relaxed mt-2"
+            >
+              Understand the terms of use for our platform. Learn about your
+              rights and responsibilities when using ScholrBee.
+            </p>
+            <div
+              class="flex items-center gap-2 mt-4 text-primary font-semibold text-sm group-hover:gap-3 transition duration-300"
+            >
+              View Terms <MoveRight class="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- contact section -->
+  <section class="bg-surface py-16 sm:px-6 md:px-20 lg:px-50 mt-5" id="contact">
+    <div class="mx-auto">
+      <div class="mb-10 max-w-2xl">
+        <h2
+          class="mt-3 text-headline-md md:text-headline-lg lg:text-headline-xl text-primary"
+        >
+          Let's build your study system together
+        </h2>
+        <p
+          class="mt-4 max-w-xl text-body-md text-on-surface-variant leading-relaxed"
+        >
+          Have a question, want a demo, or need help choosing a plan? Send a
+          message and we’ll get back to you soon.
+        </p>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+        <div
+          class="rounded-lg border border-outline/10 bg-surface-container-lowest p-5 shadow-sm sm:p-6 lg:p-8"
+        >
+          <form class="space-y-5">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-medium text-on-surface">
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  class="w-full rounded-md border border-outline/15 bg-transparent px-4 py-3 text-body-md text-on-surface outline-none transition duration-300 placeholder:text-outline focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-medium text-on-surface">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  class="w-full rounded-md border border-outline/15 bg-transparent px-4 py-3 text-body-md text-on-surface outline-none transition duration-300 placeholder:text-outline focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="subject" class="text-sm font-medium text-on-surface">
+                Subject
+              </label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="How can we help?"
+                class="w-full rounded-md border border-outline/15 bg-transparent px-4 py-3 text-body-md text-on-surface outline-none transition duration-300 placeholder:text-outline focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
+              />
+            </div>
+
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium text-on-surface">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us what you need..."
+                class="w-full resize-none rounded-md border border-outline/15 bg-transparent px-4 py-3 text-body-md leading-relaxed text-on-surface outline-none transition duration-300 placeholder:text-outline focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
+              ></textarea>
+            </div>
+
+            <div
+              class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <p class="text-sm text-on-surface-variant">
+                We usually reply within one business day.
+              </p>
+
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-on-primary transition duration-300 hover:bg-primary-container active:scale-[0.99]"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <aside
+          class="rounded-lg border border-outline/10 bg-surface-container p-5 shadow-sm sm:p-6 lg:p-8"
+        >
+          <div class="rounded-md bg-surface-container-lowest p-5 shadow-xs">
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.12em] text-secondary"
+            >
+              ScholrBee Support
+            </p>
+            <h3 class="mt-3 text-headline-md text-primary">
+              Academic help, product demos, and partnership questions
+            </h3>
+            <p
+              class="mt-3 text-body-md text-on-surface-variant leading-relaxed"
+            >
+              Reach out for onboarding, feature requests, or anything related to
+              the platform.
+            </p>
+          </div>
+
+          <div class="mt-5 space-y-3">
+            {
+              contactLinks.map((item) => (
+                <div class="flex items-start justify-between gap-4 rounded-md border border-outline/10 bg-surface-container-lowest px-4 py-4">
+                  <span class="text-sm text-outline">{item.label}</span>
+                  <span class="text-right text-sm font-medium text-primary">
+                    {item.value}
+                  </span>
+                </div>
+              ))
+            }
+          </div>
+
+          <div
+            class="mt-5 rounded-md border border-secondary/20 bg-secondary/10 p-5"
+          >
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.12em] text-secondary"
+            >
+              Quick note
+            </p>
+            <p class="mt-2 text-sm leading-relaxed text-secondary">
+              For urgent issues, include your plan name and a short summary so
+              we can help faster.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Layout>

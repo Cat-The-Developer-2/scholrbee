@@ -1,0 +1,198 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import {
+  BookOpen,
+  Compass,
+  Award,
+  Lightbulb,
+  GraduationCap,
+  ArrowRight,
+} from "@lucide/astro";
+---
+
+<Layout title="About Us - ScholrBee">
+  <!-- Navbar -->
+  <Header />
+
+  <div class="px-4 sm:px-6 md:px-20 lg:px-50 flex flex-col">
+    <!-- Intro Header Section -->
+    <section class="py-12 sm:py-20 flex flex-col items-center text-center">
+      <span
+        class="text-label-md text-secondary uppercase tracking-[0.12em] mb-3"
+        >Our Mission</span
+      >
+      <h1 class="text-headline-xl text-primary max-w-3xl leading-tight">
+        Elevating Scholarly Focus Through Mindful AI
+      </h1>
+      <p
+        class="mt-6 text-body-md sm:text-body-lg text-on-surface-variant max-w-2xl leading-relaxed"
+      >
+        ScholrBee was founded on a simple realization: the modern researcher is
+        overwhelmed by information but starved for synthesis. We build tools
+        that reduce cognitive load, so you can focus on making meaningful
+        connections.
+      </p>
+    </section>
+
+    <!-- Core Pillars Grid -->
+    <section class="py-8 grid gap-8 md:grid-cols-3">
+      <div
+        class="bg-surface-container-lowest border border-outline-variant/40 rounded-[24px] p-6 sm:p-8 shadow-subtle hover:-translate-y-1 transition duration-300"
+      >
+        <div
+          class="h-12 w-12 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-700 mb-6"
+        >
+          <GraduationCap class="w-6 h-6" />
+        </div>
+        <h3 class="font-display text-headline-md text-primary mb-3">
+          Academic Excellence
+        </h3>
+        <p class="text-body-sm text-on-surface-variant leading-relaxed">
+          Crafted with advice from top scholars and learning scientists. We
+          construct learning experiences around active recall, spaced
+          repetition, and visual linking.
+        </p>
+      </div>
+
+      <div
+        class="bg-surface-container-lowest border border-outline-variant/40 rounded-[24px] p-6 sm:p-8 shadow-subtle hover:-translate-y-1 transition duration-300"
+      >
+        <div
+          class="h-12 w-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-700 mb-6"
+        >
+          <Lightbulb class="w-6 h-6" />
+        </div>
+        <h3 class="font-display text-headline-md text-primary mb-3">
+          Intuitive Synthesis
+        </h3>
+        <p class="text-body-sm text-on-surface-variant leading-relaxed">
+          AI shouldn't do the thinking for you. Our system acts as an amplifier,
+          highlighting key details and suggesting organic links without
+          overriding your voice.
+        </p>
+      </div>
+
+      <div
+        class="bg-surface-container-lowest border border-outline-variant/40 rounded-[24px] p-6 sm:p-8 shadow-subtle hover:-translate-y-1 transition duration-300"
+      >
+        <div
+          class="h-12 w-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-700 mb-6"
+        >
+          <Compass class="w-6 h-6" />
+        </div>
+        <h3 class="font-display text-headline-md text-primary mb-3">
+          Mindful Technology
+        </h3>
+        <p class="text-body-sm text-on-surface-variant leading-relaxed">
+          We reject the attention economy. ScholrBee has a beautifully quiet
+          aesthetic, promoting focus over distraction and deep research over
+          constant notifications.
+        </p>
+      </div>
+    </section>
+
+    <!-- Detailed Narrative & Visual Callout -->
+    <section
+      class="py-12 sm:py-20 flex flex-col lg:flex-row gap-12 items-center"
+    >
+      <div class="flex-1 space-y-6">
+        <h2 class="text-headline-lg text-primary">The ScholrBee Story</h2>
+        <p
+          class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+        >
+          It began in research libraries and late-night study lounges. We
+          noticed that while students and professional researchers had more
+          access to papers than ever, the cognitive load of organizing notes,
+          matching patterns across sources, and reviewing complex concepts was
+          pulling them away from actual creative thinking.
+        </p>
+        <p
+          class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+        >
+          We realized that a folder of PDFs is a graveyard of ideas. We wanted
+          to build a "Second Brain" that isn't just a cabinet, but an active
+          discussion partner.
+        </p>
+        <p
+          class="text-body-md text-on-surface-variant leading-relaxed text-justify"
+        >
+          In 2025, we assembled a team of learning designers and software
+          engineers to build ScholrBee. Since then, thousands of students,
+          researchers, and professional thinkers have elevated their academic
+          potential with our academic-chic workspace.
+        </p>
+      </div>
+
+      <div
+        class="flex-1 bg-[#012d1d] text-[#ffdea9] rounded-[28px] p-8 sm:p-12 shadow-lg flex flex-col justify-between h-full min-h-[320px]"
+      >
+        <div>
+          <span
+            class="text-xs font-semibold uppercase tracking-[0.15em] text-on-primary-container"
+            >Our Promise</span
+          >
+          <h3
+            class="font-display text-headline-lg text-white mt-4 leading-tight"
+          >
+            We are committed to helping you study smarter, not busier.
+          </h3>
+          <p class="text-white/80 text-body-md mt-4 leading-relaxed">
+            We promise to keep your notes private, your interface focused, and
+            our features grounded in proven research principles.
+          </p>
+        </div>
+        <div class="mt-8 flex items-center gap-4">
+          <a
+            href="/app"
+            class="inline-flex items-center gap-2 rounded-full bg-[#ffdea9] text-[#271900] px-6 py-3 text-sm font-semibold hover:bg-white transition duration-300"
+          >
+            Join the Hive <ArrowRight class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 border-t border-b border-outline-variant/30 my-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block font-display text-[44px] font-bold text-primary"
+            >150k+</span
+          >
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-secondary"
+            >Notes Connected</span
+          >
+        </div>
+        <div>
+          <span class="block font-display text-[44px] font-bold text-primary"
+            >98%</span
+          >
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-secondary"
+            >Satisfaction Rate</span
+          >
+        </div>
+        <div>
+          <span class="block font-display text-[44px] font-bold text-primary"
+            >2.5x</span
+          >
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-secondary"
+            >Faster Learning</span
+          >
+        </div>
+        <div>
+          <span class="block font-display text-[44px] font-bold text-primary"
+            >45+</span
+          >
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-secondary"
+            >Countries Reached</span
+          >
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
