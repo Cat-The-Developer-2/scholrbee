@@ -10,4 +10,18 @@
   "observability": {
     "enabled": true,
   },
+  "env": {
+    "production": {
+      "routes": [
+        {
+          "pattern": "*",
+          "custom_domain": true,
+          "headers": {
+            "X-Content-Type-Options": "nosniff",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+          },
+        },
+      ],
+    },
+  },
 }

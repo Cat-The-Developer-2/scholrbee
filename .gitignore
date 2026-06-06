@@ -5,6 +5,7 @@ dist/
 
 # dependencies
 node_modules/
+lighhouseReport/
 
 # logs
 npm-debug.log*
